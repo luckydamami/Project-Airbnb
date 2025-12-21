@@ -1,0 +1,12 @@
+{
+  "name": "airbnb",
+  "version": "1.0.0",
+  "description": "My new airbnb project start",
+  "license": "ISC",
+  "author": "Lucky damami",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
