@@ -5,6 +5,7 @@ const hostRouter = require("./routes/hostRouter");
 
 const app = express();
 
+const PORT = 3000;
 app.use(express.urlencoded()); //Built-in Module
 app.use(userRouter);
 app.use(hostRouter);
@@ -13,7 +14,6 @@ app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404page.html"));
 });
 
-const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server start on port http://localhost:${PORT}`);
 });
