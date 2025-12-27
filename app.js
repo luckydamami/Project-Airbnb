@@ -2,6 +2,7 @@ const express = require("express"); //External Module
 const path = require("path"); //Built-in Module
 const userRouter = require("./routes/userRouter"); //local Module
 const hostRouter = require("./routes/hostRouter");
+const rootDir = require("./utils/rootPath");
 
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(userRouter);
 app.use(hostRouter);
 
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, "views", "404page.html"));
+  res.sendFile(path.join(rootDir, "views", "404page.html"));
 });
 
 app.listen(PORT, () => {
